@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+    <parameter>
+        <key>Instrument name</key>
+        <value>Rest</value>
+    </parameter>
+    <parameter>
+        <key>Threads</key>
+        <value>2</value>
+    </parameter>
+    <parameter>
+        <key>Сollector</key>
+        <value>Gradle</value>
+    </parameter>
+</environment>

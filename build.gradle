@@ -1,0 +1,43 @@
+apply plugin: 'java'
+apply plugin: 'io.qameta.allure'
+
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+}
+
+test {
+    useTestNG {suites 'src/test/resources/xml/parallel.xml'}
+    ignoreFailures = true
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.5"
+    }
+}
+
+allure {
+    version = '2.6.0'
+    aspectjweaver = true
+    autoconfigure = true
+}
+
+task copyEnv(type: Copy) {
+    from 'src/test/resources/xml/environment.xml'
+    into 'build/allure-results'
+}
+test.finalizedBy(copyEnv)
