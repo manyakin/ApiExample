@@ -1,7 +1,9 @@
 language: java
-dist: trusty
+install: true
 
-before_install:
-  - chmod +x gradlew
-install:  
-  - gradle clean test
+os: linux
+dist: trusty
+jdk: oraclejdk8
+
+script:
+  - ./gradlew test
