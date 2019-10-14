@@ -2,8 +2,12 @@ dist: trusty
 language: java
 jdk: oraclejdk8
 
+before_install:
+  - chmod +x gradlew 
+  
+before_script:
+  - export GRADLE_OPTS=-Dorg.gradle.daemon=false   
+
 script:
   - ./gradlew test
   
-before_install:
-  - chmod +x gradlew 
