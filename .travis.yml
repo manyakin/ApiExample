@@ -1,0 +1,15 @@
+language: java
+
+before_install:
+  - sudo apt-get install gradle
+  - gradle assemble
+  - chmod +x gradlew
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: bc8ced1fbd1a20defed76e5e09a4535b71e84f28
+  keep_history: true
+  
+  on:
+    branch: master
