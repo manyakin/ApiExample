@@ -1,5 +1,4 @@
-[![Travis](https://travis-ci.org/manyakin/ApiExample.svg?branch=master "Travis")](https://travis-ci.org/manyakin/ApiExample.svg?branch=master "Travis")
-# Api Example
+# Api Example [![Travis](https://travis-ci.org/manyakin/ApiExample.svg?branch=master "Travis")](https://travis-ci.org/manyakin/ApiExample.svg?branch=master "Travis")
 > Simple example for displaying api automation skills
 
 ## How to use
