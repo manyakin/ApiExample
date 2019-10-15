@@ -20,6 +20,11 @@ dependencies {
 test {
     useTestNG {suites 'src/test/resources/xml/parallel.xml'}
     ignoreFailures = true
+    
+     testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
 }
 
 buildscript {
