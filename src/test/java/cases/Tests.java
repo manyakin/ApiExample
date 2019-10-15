@@ -18,7 +18,7 @@ public class Tests extends Backend {
     @Story("Проверка корректного ответа кода сервера")
     public void checkSuccessStatusCode(String url) {
         Response answer = Backend.get(URL + url);
-        Assert.assertEquals(answer.getStatusCode(), 401, "Отображен не корректный статус!");
+        Assert.assertEquals(answer.getStatusCode(), 200, "Отображен не корректный статус!");
     }
 
     @Test(dataProvider = "url", dataProviderClass = Data.class)
